@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/slideLayoutRelative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/slideLayotImageView"
+        android:layout_width="100dp"
+        android:tint="@color/colorWhite"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_baseball_bat" />
+
+    <TextView
+        android:id="@+id/SlideLayoutTv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/slideLayotImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="holi"
+        android:textColor="@color/textColorLight"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/SlideLayoutTv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SlideLayoutTv1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/textColorLight" />
+
+    <TextView
+        android:id="@+id/slideLayoutTvPoint1"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_alignRight="@+id/slideLayoutTvPoint2"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="."
+        android:textColor="@color/colorGreen"
+        android:textSize="70dp" />
+    <TextView
+        android:id="@+id/slideLayoutTvPoint2"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="."
+        android:textColor="@color/colorGreen"
+        android:textSize="70dp" />
+    <TextView
+        android:id="@+id/slideLayoutTvPoint3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_alignLeft="@id/slideLayoutTvPoint2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="."
+        android:textColor="@color/colorGreen"
+        android:textSize="70dp" />
+
+</RelativeLayout>
