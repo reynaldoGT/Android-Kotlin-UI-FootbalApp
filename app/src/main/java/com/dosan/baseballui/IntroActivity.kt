@@ -16,7 +16,7 @@ class IntroActivity : AppCompatActivity() {
         introActivityViewPager.adapter = sliderAdapter
 
         introActivitySaltar.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, InicioActivity::class.java))
         }
     }
 }

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/loginActivityImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_football_notdata"
+        android:tint="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/loginActivityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginActivityImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Futbol APP"
+        android:textColor="@color/textColorLight"
+        android:textSize="24dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/loginActivityTextViewForgot"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorWhite"
+            android:drawableLeft="@drawable/ic_person_login"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/colorWhite"
+            android:hint="User Name"
+            android:inputType="textWebEmailAddress"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:backgroundTint="@color/colorWhite" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorWhite"
+            android:drawableLeft="@drawable/ic_password_lock"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/colorWhite"
+            android:hint="User Name"
+            android:inputType="textPassword"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:backgroundTint="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/loginActivityTBTLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/gradientbuttonlight"
+            android:text="Login"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/loginActivityTBTSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/gradientbuttonprimary"
+            android:text="Login"
+            android:textColor="@color/textColorLight" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/loginActivityTextViewForgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="¿Olvidaste la contraseña?"
+        android:textColor="@color/colorWhite" />
+
+</RelativeLayout>

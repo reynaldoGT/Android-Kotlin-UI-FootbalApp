@@ -11,5 +11,8 @@
 
     <string name="saltar_intro_activity">Saltar</string>
 
+    <string name="open">Open </string>
+    <string name="close">Closer</string>
+
 
 </resources>
