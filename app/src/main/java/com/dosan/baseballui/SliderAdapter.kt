@@ -60,7 +60,7 @@ class SliderAdapter(var context: Context) : PagerAdapter() {
             view.slideLayoutTvPoint2.setTextColor(context.resources.getColor(R.color.colorWhite))
             view.slideLayoutTvPoint3.setTextColor(context.resources.getColor(R.color.colorTransparentWhite))
         }
-        if (position == 0) {
+        if (position == 2) {
             view.slideLayoutTvPoint1.setTextColor(context.resources.getColor(R.color.colorTransparentWhite))
             view.slideLayoutTvPoint2.setTextColor(context.resources.getColor(R.color.colorTransparentWhite))
             view.slideLayoutTvPoint3.setTextColor(context.resources.getColor(R.color.colorWhite))
