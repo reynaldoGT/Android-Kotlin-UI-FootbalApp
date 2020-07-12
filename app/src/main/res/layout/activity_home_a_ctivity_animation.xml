@@ -50,8 +50,9 @@
         android:background="@drawable/gradient" />
 
     <ImageView
-        android:id="@+id/hoimeAnimationActivity"
+        android:id="@+id/homeAnimationActivity"
         android:layout_width="50dp"
+
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:paddingLeft="16dp"
