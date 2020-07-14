@@ -15,7 +15,7 @@
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
-        android:src="@drawable/ic_baseball_bat"
+        android:src="@drawable/ic_ball_soccer"
         android:tint="@color/colorWhite" />
 
     <LinearLayout
@@ -27,39 +27,42 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:layout_height="wrap_content"
-            android:text="Register"
+            android:text="Registro"
             android:textColor="@color/textColorLight"
             android:textSize="20dp"
+            android:layout_gravity="center"
             android:textStyle="bold" />
 
         <EditText
             style="@style/RegisterActivityText"
-            android:hint=" User Name" />
+            android:hint="Nombre de usuario" />
 
         <EditText
             style="@style/RegisterActivityText"
-            android:hint="Email Address"
+            android:hint="Correo electronico"
             android:inputType="textEmailAddress" />
 
         <EditText
             style="@style/RegisterActivityText"
-            android:hint="Password"
+            android:hint="Contraseña"
             android:inputType="textPassword" />
 
         <EditText
             style="@style/RegisterActivityText"
-            android:hint="Retype Password"
+            android:hint="Repita Contraseña"
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/registarActivitySignUp"
+            android:id="@+id/registarActivitySignUp2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@drawable/gradientbuttonlight"
-            android:text="Sign Up"
+            android:text="Registrarse"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimary"
 
@@ -73,6 +76,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="16dp"
         android:gravity="center"
-        android:text="Already a member ? log Here" />
+        android:text="¿Ya tienes cuenta? Entrar " />
 
 </RelativeLayout>

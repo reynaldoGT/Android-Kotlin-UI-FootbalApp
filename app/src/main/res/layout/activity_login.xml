@@ -23,7 +23,7 @@
         android:layout_below="@id/loginActivityImageView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Futbol APP"
+        android:text="@string/app_name"
         android:textColor="@color/textColorLight"
         android:textSize="24dp" />
 
@@ -44,7 +44,7 @@
             android:drawableLeft="@drawable/ic_person_login"
             android:drawablePadding="8dp"
             android:drawableTint="@color/colorWhite"
-            android:hint="User Name"
+            android:hint="Nombre de usuario"
             android:inputType="textWebEmailAddress"
             android:textColor="@color/colorWhite"
             android:textColorHint="@color/colorWhite" />
@@ -61,7 +61,7 @@
             android:drawableLeft="@drawable/ic_password_lock"
             android:drawablePadding="8dp"
             android:drawableTint="@color/colorWhite"
-            android:hint="User Name"
+            android:hint="Contraseña"
             android:inputType="textPassword"
             android:textColor="@color/colorWhite"
             android:textColorHint="@color/colorWhite" />
@@ -72,23 +72,23 @@
             android:backgroundTint="@color/colorWhite" />
 
         <Button
-            android:id="@+id/loginActivityTBTLogin"
+            android:id="@+id/loginActivityTBTLogin1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/gradientbuttonlight"
-            android:text="Login"
+            android:text="Ingresar"
             android:textColor="@color/colorPrimary" />
 
         <Button
-            android:id="@+id/loginActivityTBTSignUp"
+            android:id="@+id/loginActivityTBTSignUp1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/gradientbuttonprimary"
-            android:text="Login"
+            android:text="Registrarse"
             android:textColor="@color/textColorLight" />
 
     </LinearLayout>

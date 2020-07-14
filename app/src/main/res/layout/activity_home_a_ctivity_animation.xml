@@ -14,7 +14,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:paddingLeft="16dp"
-        android:text="Animtaiton" />
+        android:text="Animaciones" />
 
     <View
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:paddingLeft="16dp"
-        android:text="Transition" />
+        android:text="Transicion" />
 
     <View
         android:layout_width="match_parent"
@@ -56,7 +56,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:paddingLeft="16dp"
-        android:src="@drawable/ic_baseball_ball" />
+        android:src="@drawable/ic_soccer_ball_2" />
 
     <View
         android:layout_width="match_parent"
@@ -70,7 +70,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:paddingLeft="16dp"
-        android:text="Lottie" />
+        android:text="Animaciones con Lottie" />
 
     <View
         android:layout_width="match_parent"

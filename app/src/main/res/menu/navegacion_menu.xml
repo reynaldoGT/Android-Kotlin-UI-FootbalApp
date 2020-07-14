@@ -2,18 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/profile"
-        android:icon="@drawable/ic_baseball_bat"
-        android:title="Profile" />
+        android:icon="@drawable/ic_profile_soccer"
+        android:title="Perfil" />
     <item
         android:id="@+id/home"
-        android:title="Home" />
+        android:icon="@drawable/ic_ball_soccer"
+        android:title="Animaciones" />
     <item
         android:id="@+id/amigos"
+        android:icon="@drawable/ic_soccer_friend"
         android:title="Amigos" />
     <item
         android:id="@+id/alerta"
+        android:icon="@drawable/ic_bell_alert"
         android:title="Alerta" />
     <item
-        android:id="@+id/logout"
-        android:title="Logout" />
+        android:id="@+id/Salir"
+        android:title="Salir"
+        android:icon="@drawable/ic_logout"
+        />
 </menu>

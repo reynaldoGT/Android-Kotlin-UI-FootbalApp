@@ -39,6 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nombre"
+                    android:layout_marginRight="8dp"
                     android:textSize="10dp" />
 
                 <TextView
@@ -60,12 +61,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Puesto"
+                    android:layout_marginRight="8dp"
                     android:textSize="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bateador"
+                    android:text="Centro"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
 
@@ -81,12 +83,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Puesto"
+                    android:layout_marginRight="8dp"
                     android:textSize="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Medip campo"
+                    android:text="Medio Campo"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
             </LinearLayout>

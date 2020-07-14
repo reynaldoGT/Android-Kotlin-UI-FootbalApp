@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginBottom="8dp">
 
     <TextView
         android:id="@+id/textView2"
@@ -11,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="AtlantaBraves Bateador"
+        android:text="Atlanta Braves Delantero"
         app:layout_constraintStart_toEndOf="@+id/circleImageView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -83,14 +84,15 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_goneMarginStart="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:drawableLeft="@drawable/ic_like"
         android:drawableTint="@color/textColorgray"
+
         android:text="Recomendar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_goneMarginStart="8dp" />
 
     <TextView
         android:id="@+id/textView6"

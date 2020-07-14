@@ -72,14 +72,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingTop="8dp"
-                        android:text="Dorsan"
+                        android:text="Numero"
                         android:textSize="14dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingTop="8dp"
-                        android:text="23"
+                        android:text="10"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="20dp"
                         android:textStyle="bold"
@@ -129,7 +129,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingTop="8dp"
-                        android:text="100B"
+                        android:text="-"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="20dp"
                         android:textStyle="bold" />
@@ -150,7 +150,7 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_baseball_bat"
+            android:src="@drawable/ic_ball_soccer"
             android:tint="@color/coloAccentDark" />
 
         <TextView
@@ -173,7 +173,7 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_baseball_ball"
+            android:src="@drawable/ic_soccer_feet"
             android:tint="@color/coloAccentDark" />
 
         <TextView

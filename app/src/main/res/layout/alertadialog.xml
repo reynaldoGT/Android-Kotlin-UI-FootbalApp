@@ -37,7 +37,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:paddingTop="8dp"
-            android:text="Bateador"
+            android:text="Centro"
+            android:layout_marginBottom="8dp"
             android:textColor="@color/textColorLight"
             android:textStyle="bold" />
     </LinearLayout>
@@ -57,7 +58,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_baseball_ball" />
+                android:src="@drawable/ic_ball_soccer" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -83,12 +84,12 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_baseball_bat" />
+                android:src="@drawable/ic_soccer_feet" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="HomeRum"
+                android:text="Tiros"
                 android:textStyle="bold" />
 
             <TextView

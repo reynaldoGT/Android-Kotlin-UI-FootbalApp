@@ -18,9 +18,9 @@ class SliderAdapter(var context: Context) : PagerAdapter() {
     var slider_backgroud: IntArray =
         intArrayOf(R.drawable.gradient, R.drawable.gradient2, R.drawable.gradient1)
     var sliderImages: IntArray = intArrayOf(
-        R.drawable.ic_baseball_ball,
-        R.drawable.ic_baseball_bat,
-        R.drawable.icons8_baseball
+        R.drawable.ic_ball_soccer,
+        R.drawable.ic_soccer_ball_2,
+        R.drawable.ic_soccer_feet
     )
     var slider_heading: IntArray = intArrayOf(
         R.string.intro_bienvenida,

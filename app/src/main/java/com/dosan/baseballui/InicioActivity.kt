@@ -2,10 +2,10 @@ package com.dosan.baseballui
 
 import android.app.Dialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_inicio.*
 import kotlinx.android.synthetic.main.alertadialog.*
 
@@ -29,7 +29,9 @@ class InicioActivity : AppCompatActivity() {
 
         inicioActivityNavigationView.setNavigationItemSelectedListener {
             when (it.itemId) {
+
                 R.id.profile -> {
+                    startActivity(Intent(this, ProfileActivity::class.java))
                     true
                 }
                 R.id.amigos -> {
@@ -50,6 +52,9 @@ class InicioActivity : AppCompatActivity() {
                     dialog.alertDialogCerrar.setOnClickListener {
                         dialog.dismiss()
                     }
+                    true
+                }
+                R.id.Salir ->{
                     true
                 }
                 else -> false
