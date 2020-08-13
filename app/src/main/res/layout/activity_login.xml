@@ -38,36 +38,72 @@
         android:layout_marginBottom="8dp"
         android:orientation="vertical">
 
-        <EditText
+        <!--        <EditText-->
+        <!--            android:id="@+id/edCorreo"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:backgroundTint="@color/colorWhite"-->
+        <!--            android:drawableLeft="@drawable/ic_person_login"-->
+        <!--            android:drawablePadding="8dp"-->
+        <!--            android:drawableTint="@color/colorWhite"-->
+        <!--            android:hint="Nombre de usuario"-->
+        <!--            android:inputType="textWebEmailAddress"-->
+        <!--            android:textColor="@color/colorWhite"-->
+        <!--            android:textColorHint="@color/colorWhite" />-->
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorWhite"
-            android:drawableLeft="@drawable/ic_person_login"
-            android:drawablePadding="8dp"
-            android:drawableTint="@color/colorWhite"
-            android:hint="Nombre de usuario"
-            android:inputType="textWebEmailAddress"
-            android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorWhite" />
+            android:hint="@string/nombre_usuario"
+            android:textColorHint="@color/colorWhite">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_person_login"
+                android:drawablePadding="8dp"
+                android:backgroundTint="@color/colorWhite"
+                android:drawableTint="@color/colorWhite"
+
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorWhite" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
             android:backgroundTint="@color/colorWhite" />
 
-        <EditText
+        <!--        <EditText-->
+        <!--            android:id="@+id/eDpassword"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:backgroundTint="@color/colorWhite"-->
+        <!--            android:drawableLeft="@drawable/ic_password_lock"-->
+        <!--            android:drawablePadding="8dp"-->
+        <!--            android:drawableTint="@color/colorWhite"-->
+        <!--            android:hint="Contraseña"-->
+        <!--            android:inputType="textPassword"-->
+        <!--            android:textColor="@color/colorWhite"-->
+        <!--            android:textColorHint="@color/colorWhite" />-->
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/eDpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorWhite"
-            android:drawableLeft="@drawable/ic_password_lock"
-            android:drawablePadding="8dp"
-            android:drawableTint="@color/colorWhite"
-            android:hint="Contraseña"
-            android:inputType="textPassword"
-            android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorWhite" />
+            android:hint="@string/password"
+            android:textColorHint="@color/colorWhite">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_password_lock"
+                android:drawablePadding="8dp"
+                android:backgroundTint="@color/colorWhite"
+                android:drawableTint="@color/colorWhite"
+                android:inputType="textPassword"
+                android:textColor="@color/colorWhite" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <View
             android:layout_width="wrap_content"
@@ -83,6 +119,13 @@
             android:background="@drawable/gradientbuttonlight"
             android:text="Ingresar"
             android:textColor="@color/colorPrimary" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/loginActivityTBTSignUp1"

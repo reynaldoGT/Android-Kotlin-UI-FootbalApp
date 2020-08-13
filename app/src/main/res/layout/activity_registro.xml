@@ -18,47 +18,88 @@
         android:src="@drawable/ic_ball_soccer"
         android:tint="@color/colorWhite" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerActivityImagenView"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Registro"
+        android:textColor="@color/textColorLight"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/registerActivityImagenView"
-        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="103dp"
         android:layout_marginBottom="8dp"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_height="wrap_content"
-            android:text="Registro"
-            android:textColor="@color/textColorLight"
-            android:textSize="20dp"
-            android:layout_gravity="center"
-            android:textStyle="bold" />
 
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nombreUsuario"
-            style="@style/RegisterActivityText"
-            android:hint="Nombre de usuario" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorWhite">
 
-        <EditText
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/RegisterMaterialEditText"
+                android:hint="Nombre Usuario"
+                android:inputType="text"
+                android:textColor="@color/colorWhite"
+
+
+                android:textColorHint="@color/textColorLight" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/registroEmail"
-            style="@style/RegisterActivityText"
-            android:hint="Correo electronico"
-            android:inputType="textEmailAddress" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorWhite">
 
-        <EditText
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/RegisterMaterialEditText"
+                android:hint="Correo electronico"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorWhite"
+
+                android:textColorHint="@color/textColorLight" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/registroPassword"
-            style="@style/RegisterActivityText"
-            android:hint="Contraseña"
-            android:inputType="textPassword" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorWhite">
 
-        <EditText
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/RegisterMaterialEditText"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:textColor="@color/colorWhite"
+
+                android:textColorHint="@color/textColorLight" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/retypePassword"
-            style="@style/RegisterActivityText"
-            android:hint="Repita Contraseña"
-            android:inputType="textPassword" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorWhite">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/RegisterMaterialEditText"
+                android:hint="Escriba de nuevo su contraseña"
+                android:inputType="textPassword"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/textColorLight" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <Button
             android:id="@+id/btnRegistrar"
@@ -71,6 +112,14 @@
             android:textColor="@color/colorPrimary"
 
             />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="16dp"
+            android:visibility="gone" />
     </LinearLayout>
 
     <TextView

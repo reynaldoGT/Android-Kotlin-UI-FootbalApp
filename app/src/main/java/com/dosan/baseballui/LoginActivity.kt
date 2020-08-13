@@ -3,6 +3,7 @@ package com.dosan.baseballui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
@@ -24,20 +25,25 @@ class LoginActivity : AppCompatActivity() {
     private fun setup() {
         title = "Autenticacion"
         loginActivityTBTLogin1.setOnClickListener {
-            if (edCorreo.text.isNotEmpty() && eDpassword.text.isNotEmpty()) {
+            if (edCorreo.editText?.text!!.isNotEmpty() && eDpassword.editText?.text!!.isNotEmpty()) {
+                progressBar.visibility = View.VISIBLE
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(
-                    edCorreo.text.toString(), eDpassword.text.toString()
+                    edCorreo.editText?.text.toString(), eDpassword.editText?.text.toString()
                 ).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        limpiarDatos()
+                        showInicio(edCorreo?.editText!!.text.toString(), ProviderType.BASIC)
+//                        limpiarDatos()
+                        progressBar.visibility = View.GONE
                         showInicio(it.result?.user?.email ?: "", ProviderType.BASIC)
                     } else {
+                        progressBar.visibility = View.GONE
                         showAlert()
                     }
                 }
             }
         }
     }
+
     private fun showAlert() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
@@ -54,8 +60,9 @@ class LoginActivity : AppCompatActivity() {
         }
         startActivity(homeIntent)
     }
-    private fun limpiarDatos(){
-        edCorreo.text.clear()
-        eDpassword.text.clear()
+
+    private fun limpiarDatos() {
+        edCorreo.editText?.text!!.clear()
+        eDpassword.editText?.text!!.clear()
     }
 }

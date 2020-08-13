@@ -13,6 +13,8 @@
 
     <string name="open">Open</string>
     <string name="close">Closer</string>
+    <string name="nombre_usuario">Nombre de usuario</string>
+    <string name="password">password</string>
 
 
 </resources>
