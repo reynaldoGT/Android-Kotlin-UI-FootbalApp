@@ -6,9 +6,13 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_inicio.*
 import kotlinx.android.synthetic.main.alertadialog.*
 
+enum class ProviderType{
+    BASIC
+}
 
 class InicioActivity : AppCompatActivity() {
 
@@ -55,6 +59,8 @@ class InicioActivity : AppCompatActivity() {
                     true
                 }
                 R.id.Salir ->{
+                    FirebaseAuth.getInstance().signOut()
+                    startActivity(Intent(this, LoginActivity::class.java))
                     true
                 }
                 else -> false

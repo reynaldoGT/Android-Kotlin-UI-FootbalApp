@@ -38,26 +38,30 @@
             android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/nombreUsuario"
             style="@style/RegisterActivityText"
             android:hint="Nombre de usuario" />
 
         <EditText
+            android:id="@+id/registroEmail"
             style="@style/RegisterActivityText"
             android:hint="Correo electronico"
             android:inputType="textEmailAddress" />
 
         <EditText
+            android:id="@+id/registroPassword"
             style="@style/RegisterActivityText"
             android:hint="Contraseña"
             android:inputType="textPassword" />
 
         <EditText
+            android:id="@+id/retypePassword"
             style="@style/RegisterActivityText"
             android:hint="Repita Contraseña"
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/registarActivitySignUp2"
+            android:id="@+id/btnRegistrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
