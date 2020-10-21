@@ -7,7 +7,7 @@
     android:background="@drawable/gradient"
     android:orientation="vertical"
     android:paddingTop="16dp"
-    tools:context=".TransitionAcrivity">
+    tools:context=".TransitionActivity">
 
     <ImageView
         android:id="@+id/transitionAcitivityImagen"

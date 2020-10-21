@@ -43,7 +43,7 @@ class InicioActivity : AppCompatActivity() {
                     true
                 }
                 R.id.home -> {
-                    startActivity(Intent(this, HomeACtivityAnimation::class.java))
+                    startActivity(Intent(this, HomeActivityAnimation::class.java))
                     true
                 }
                 R.id.alerta -> {

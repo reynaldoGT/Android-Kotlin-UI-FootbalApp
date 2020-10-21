@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".LottieActivity"></activity>
-        <activity android:name=".TransitionAcrivity" />
+        <activity android:name=".TransitionActivity" />
         <activity android:name=".FadeActivity" />
         <activity android:name=".AnimationActivity" />
-        <activity android:name=".HomeACtivityAnimation" />
+        <activity android:name=".HomeActivityAnimation" />
         <activity android:name=".AmigosActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".RegistroActivity" />

@@ -15,7 +15,7 @@ class SliderAdapter(var context: Context) : PagerAdapter() {
         layoutInflater = LayoutInflater.from(context)
     }
 
-    var slider_backgroud: IntArray =
+    var slider_background: IntArray =
         intArrayOf(R.drawable.gradient, R.drawable.gradient2, R.drawable.gradient1)
     var sliderImages: IntArray = intArrayOf(
         R.drawable.ic_ball_soccer,
@@ -45,7 +45,7 @@ class SliderAdapter(var context: Context) : PagerAdapter() {
 
         val view = layoutInflater.inflate(R.layout.slide_layout, container, false)
 
-        view.slideLayoutRelative.setBackgroundResource(slider_backgroud[position])
+        view.slideLayoutRelative.setBackgroundResource(slider_background[position])
         view.slideLayotImageView.setImageResource(sliderImages[position])
         view.SlideLayoutTv1.setText(slider_heading[position])
         view.SlideLayoutTv2.setText(slider_descriptions[position])
