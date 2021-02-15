@@ -6,12 +6,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.util.Pair
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.widget.Toolbar
 import kotlinx.android.synthetic.main.activity_home_a_ctivity_animation.*
 
 class HomeActivityAnimation : AppCompatActivity() {
+
+    var toolbar: Toolbar? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_a_ctivity_animation)
+
+
+        toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+        val actionBar: ActionBar? = supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true);
 
         HomeAnimationTvAnimation.setOnClickListener {
             startActivity(Intent(this, AnimationActivity::class.java))

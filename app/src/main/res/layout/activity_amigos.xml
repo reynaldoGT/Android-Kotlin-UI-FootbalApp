@@ -1,27 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AmigosActivity">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/colorWhite" />
 
-        <include layout="@layout/listitemsamigos" />
 
-        <include layout="@layout/listitemsamigos" />
+    <ScrollView xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AmigosActivity">
 
-        <include layout="@layout/listitemsamigos" />
 
-        <include layout="@layout/listitemsamigos" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <include layout="@layout/listitemsamigos" />
+            <include layout="@layout/listitemsamigos" />
 
-        <include layout="@layout/listitemsamigos" />
+            <include layout="@layout/listitemsamigos" />
 
-    </LinearLayout>
-</ScrollView>
+            <include layout="@layout/listitemsamigos" />
+
+            <include layout="@layout/listitemsamigos" />
+
+            <include layout="@layout/listitemsamigos" />
+
+            <include layout="@layout/listitemsamigos" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -7,6 +7,17 @@
     android:orientation="vertical"
     tools:context=".ProfileActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/colorWhite" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="280dp">
@@ -199,6 +210,7 @@
             android:layout_weight="1"
             android:background="@drawable/gradient_button"
             android:text="Llamar" />
+
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -207,6 +219,7 @@
             android:layout_weight="1"
             android:background="@drawable/gradient_button"
             android:text="Editar" />
+
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"

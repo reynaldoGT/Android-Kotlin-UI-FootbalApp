@@ -16,7 +16,8 @@ class RegistroActivity : AppCompatActivity() {
         setContentView(R.layout.activity_registro)
 
         registerActivityLogin.setOnClickListener {
-            Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
         btnRegistrar.setOnClickListener {
             setup()

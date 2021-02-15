@@ -7,6 +7,17 @@
     android:orientation="vertical"
     tools:context=".HomeActivityAnimation">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/colorWhite" />
+
     <TextView
         android:id="@+id/HomeAnimationTvAnimation"
         android:layout_width="wrap_content"

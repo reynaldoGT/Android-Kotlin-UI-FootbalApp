@@ -60,9 +60,10 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorWhite"
                 android:drawableStart="@drawable/ic_person_login"
                 android:drawablePadding="8dp"
-                android:backgroundTint="@color/colorWhite"
+
                 android:drawableTint="@color/colorWhite"
 
                 android:inputType="textEmailAddress"
@@ -97,9 +98,9 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorWhite"
                 android:drawableStart="@drawable/ic_password_lock"
                 android:drawablePadding="8dp"
-                android:backgroundTint="@color/colorWhite"
                 android:drawableTint="@color/colorWhite"
                 android:inputType="textPassword"
                 android:textColor="@color/colorWhite" />
@@ -111,7 +112,7 @@
             android:backgroundTint="@color/colorWhite" />
 
         <Button
-            android:id="@+id/loginActivityTBTLogin1"
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -119,6 +120,31 @@
             android:background="@drawable/gradientbuttonlight"
             android:text="Ingresar"
             android:textColor="@color/colorPrimary" />
+
+        <!--                android:drawableStart="@drawable/ic_google"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/btnFacebookLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
+
+            <!--                android:drawableStart="@drawable/ic_facebook"-->
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/btnGoogleLogin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="Text" />
+
+        </LinearLayout>
 
         <ProgressBar
             android:id="@+id/progressBar"

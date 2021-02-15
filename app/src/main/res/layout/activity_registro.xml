@@ -129,6 +129,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="16dp"
         android:gravity="center"
+        android:textColor="@color/colorWhite"
         android:text="¿Ya tienes cuenta? Entrar " />
 
 </RelativeLayout>

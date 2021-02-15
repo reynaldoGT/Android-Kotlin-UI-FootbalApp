@@ -4,13 +4,17 @@ import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import com.dosan.baseballui.auth.Auth
+import com.facebook.login.LoginManager
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_inicio.*
 import kotlinx.android.synthetic.main.alertadialog.*
 
-enum class ProviderType{
+enum class ProviderType {
     BASIC
 }
 
@@ -18,9 +22,18 @@ class InicioActivity : AppCompatActivity() {
 
     lateinit var toggle: ActionBarDrawerToggle
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inicio)
+        val auth = Auth(this)
+
+//        if (!auth.hayToken()) {
+//            val loginActivity = Intent(this, LoginActivity::class.java)
+//            startActivity(loginActivity)
+//        }
 
         toggle =
             ActionBarDrawerToggle(this, inicioActivityDrawerLayout, R.string.open, R.string.close)
@@ -47,7 +60,7 @@ class InicioActivity : AppCompatActivity() {
                     true
                 }
                 R.id.alerta -> {
-                    var dialog = Dialog(this)
+                    val dialog = Dialog(this)
                     dialog.setContentView(R.layout.alertadialog)
                     dialog.show()
                     dialog.alertDiaglodPerfil.setOnClickListener {
@@ -58,9 +71,15 @@ class InicioActivity : AppCompatActivity() {
                     }
                     true
                 }
-                R.id.Salir ->{
+                R.id.Salir -> {
                     FirebaseAuth.getInstance().signOut()
+                    LoginManager.getInstance().logOut();
+                    auth.clearShared()
+
                     startActivity(Intent(this, LoginActivity::class.java))
+
+
+
                     true
                 }
                 else -> false
