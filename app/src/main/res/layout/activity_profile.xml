@@ -33,7 +33,7 @@
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
-            android:src="@drawable/soccer_profile" />
+            android:src="@drawable/ic_no_image_profile" />
 
         <TextView
             android:id="@+id/profileActivityTvName"

@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="160dp"
-    android:background="@drawable/soccer_statdium"
+    android:layout_height="170dp"
+    android:background="@drawable/soccer_stadium"
     android:orientation="vertical"
     android:padding="24dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/headerCircle"
+        android:id="@+id/profileHeaderImage"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:src="@drawable/soccer_profile" />
+        android:src="@drawable/ic_no_image_profile" />
 
     <TextView
-        android:id="@+id/navigationProfile"
+        android:id="@+id/navigationNameProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="Alejandro Gonzales"
+        android:text="@string/name_example"
         android:textColor="@color/textColorLight"
         android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="18dp"
+        android:layout_height="wrap_content"
         android:text="Medio Campo"
         android:textColor="@color/textColorLight" />
 

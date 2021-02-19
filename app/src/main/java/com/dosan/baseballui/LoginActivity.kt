@@ -1,5 +1,6 @@
 package com.dosan.baseballui
 
+
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -16,10 +17,10 @@ import com.facebook.login.LoginResult
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
+import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
-import com.google.firebase.auth.UserInfo
 import kotlinx.android.synthetic.main.activity_login.*
 
 
@@ -46,10 +47,12 @@ class LoginActivity : AppCompatActivity() {
 //            showInicioFast()
 
         }
+//        val navigationView = findViewById<View>(R.id.navigation) as NavigationView
 
         setContentView(R.layout.activity_login)
+
         btnLogin.setOnClickListener {
-            //startActivity(Intent(this, InicioActivity::class.java))
+                        //startActivity(Intent(this, InicioActivity::class.java))
             setup()
         }
         loginActivityTBTSignUp1.setOnClickListener {

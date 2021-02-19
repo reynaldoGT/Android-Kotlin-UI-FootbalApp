@@ -82,6 +82,22 @@ class Auth(var activity: AppCompatActivity) {
         editor.apply()
     }
 
+    fun getUserInfo(): SaveUserInfo {
+        val settings = activity.getSharedPreferences(SETTINGS, 0)
+        val email = settings.getString(EMAIL, "")
+        val displayName = settings.getString(DISPLAY_NAME, "")
+        val uriImage = settings.getString(URL_IMAGE, "")
+        val token = settings.getString(ACCESS_TOKEN, "")
+
+
+        return SaveUserInfo(
+            email!!,
+            displayName!!,
+            uriImage!!,
+            token!!
+        )
+    }
+
     fun jumpedIntro(jump: String) {
         val settings = activity.getSharedPreferences(SETTINGS, 0)
         val editor = settings.edit()

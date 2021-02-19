@@ -7,6 +7,7 @@ class SaveUserInfo(
     idToken: String
 
 ) {
+
     var email = email
     var displayName = display
     var urlImage = urlImage
