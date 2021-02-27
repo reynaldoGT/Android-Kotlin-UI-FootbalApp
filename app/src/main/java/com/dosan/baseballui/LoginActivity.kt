@@ -17,7 +17,6 @@ import com.facebook.login.LoginResult
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
-import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
@@ -39,20 +38,14 @@ class LoginActivity : AppCompatActivity() {
         auth = Auth(this)
 
         if (auth?.hayToken()!!) {
-            Log.d("Token Status", auth?.getToken()!!)
             showInicioFast()
-        } else {
-//            val token = auth?.getToken()!!
-//            Log.d("Token Status", auth?.getToken()!!)
-//            showInicioFast()
-
         }
-//        val navigationView = findViewById<View>(R.id.navigation) as NavigationView
+
 
         setContentView(R.layout.activity_login)
 
         btnLogin.setOnClickListener {
-                        //startActivity(Intent(this, InicioActivity::class.java))
+            //startActivity(Intent(this, InicioActivity::class.java))
             setup()
         }
         loginActivityTBTSignUp1.setOnClickListener {
@@ -65,6 +58,8 @@ class LoginActivity : AppCompatActivity() {
                 .requestEmail()
                 .build()
             val googleClient = GoogleSignIn.getClient(this, googleConf)
+            // if there is a client authenticated already
+            googleClient.signOut()
 
             startActivityForResult(googleClient.signInIntent, GOOGLE_SIGN_IN)
         }
@@ -84,19 +79,20 @@ class LoginActivity : AppCompatActivity() {
                             FirebaseAuth.getInstance().signInWithCredential(credential)
                                 .addOnCompleteListener {
                                     if (it.isSuccessful) {
-                                        var email = it.result?.user?.email ?: ""
-                                        var displayName = it.result?.user?.displayName
-                                        var urlImage = it.result?.user?.photoUrl
+                                        val email = it.result?.user?.email ?: ""
+                                        val displayName = it.result?.user?.displayName
+                                        val urlImage = it.result?.user?.photoUrl
                                         val infoUser =
                                             SaveUserInfo(
                                                 email,
                                                 displayName!!,
                                                 urlImage.toString(),
-                                                token.token
+                                                token.token,
+                                                LoginType.FACEBOOK.toString()
                                             )
 
-                                        val authxd = Auth(this@LoginActivity)
-                                        authxd.saveDataInfo(infoUser)
+                                        val facebookUser = Auth(this@LoginActivity)
+                                        facebookUser.saveDataInfo(infoUser)
 
 
                                         showInicioFast()
@@ -132,20 +128,22 @@ class LoginActivity : AppCompatActivity() {
                     showInicio(edCorreo?.editText!!.text.toString(), ProviderType.BASIC)
 //                        limpiarDatos()
                     val mUser = FirebaseAuth.getInstance().currentUser
-                    val imageURL = mUser?.photoUrl.toString()
-                    val name = mUser?.email!!
 
-                    auth?.saveNameAndImage(name)
+                    val name = mUser?.email!!
 
                     mUser.getIdToken(true)
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {
                                 val idToken = task.result!!.token
 
-//                                    Log.d("Tooken", idToken!!)
-                                auth?.saveToken(idToken!!)
-
-
+                                val firebaseUser = SaveUserInfo(
+                                    name,
+                                    name,
+                                    "null",
+                                    idToken!!,
+                                    "FIREBASE USER"
+                                )
+                                auth?.saveDataInfo(firebaseUser)
                                 Log.d("Token ", auth?.getToken()!!)
 
                             } else {
@@ -224,7 +222,8 @@ class LoginActivity : AppCompatActivity() {
                                     account.email!!,
                                     account.displayName!!,
                                     account.photoUrl.toString(),
-                                    account.idToken!!
+                                    account.idToken!!,
+                                    LoginType.GOOGLE.toString()
                                 )
 
                                 auth?.saveDataInfo(userInfo)

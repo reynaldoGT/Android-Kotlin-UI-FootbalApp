@@ -9,33 +9,11 @@ class Auth(var activity: AppCompatActivity) {
     private val ACCESS_TOKEN = "token"
     private val SETTINGS = "SETTINGS"
     private val DISPLAY_NAME = "DISPLAY_NAME"
-    private val URL_IMAGE = "URL_iMAGE"
+    private val URL_IMAGE = "URL_IMAGE"
     private val EMAIL = "EMAIL"
     private val SHOW_INTRO = "SHOW_INTRO"
+    private val LOGIN_TYPE = "TYPE_SESSION"
 
-    fun saveToken(token: String): Boolean {
-        if (token.isEmpty()) {
-            return false
-        }
-
-        val settings = activity.getSharedPreferences(SETTINGS, 0)
-        val editor = settings.edit()
-
-        editor.putString(ACCESS_TOKEN, token)
-        editor.apply()
-        return true
-    }
-
-    fun saveNameAndImage(displayName: String): Boolean {
-
-        val settings = activity.getSharedPreferences(SETTINGS, 0)
-        val editor = settings.edit()
-
-        editor.putString(DISPLAY_NAME, displayName)
-//        editor.putString(IMAGE_URL, imageUrl)
-        editor.apply()
-        return true
-    }
 
     fun getToken(): String {
 
@@ -58,6 +36,7 @@ class Auth(var activity: AppCompatActivity) {
         editor.putString(URL_IMAGE, "")
         editor.putString(DISPLAY_NAME, "")
         editor.putString(ACCESS_TOKEN, "")
+        editor.putString(LOGIN_TYPE, "")
 
         editor.apply()
     }
@@ -77,8 +56,10 @@ class Auth(var activity: AppCompatActivity) {
         editor.putString(EMAIL, userInfo.email)
         editor.putString(URL_IMAGE, userInfo.urlImage)
         editor.putString(ACCESS_TOKEN, userInfo.idToken)
+        editor.putString(ACCESS_TOKEN, userInfo.idToken)
+        editor.putString(LOGIN_TYPE, userInfo.type_session)
 
-//        editor.putString(IMAGE_URL, imageUrl)
+
         editor.apply()
     }
 
@@ -88,13 +69,15 @@ class Auth(var activity: AppCompatActivity) {
         val displayName = settings.getString(DISPLAY_NAME, "")
         val uriImage = settings.getString(URL_IMAGE, "")
         val token = settings.getString(ACCESS_TOKEN, "")
+        val typeSession = settings.getString(LOGIN_TYPE, "")
 
 
         return SaveUserInfo(
             email!!,
             displayName!!,
             uriImage!!,
-            token!!
+            token!!,
+            typeSession!!
         )
     }
 

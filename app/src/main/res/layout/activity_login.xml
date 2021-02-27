@@ -14,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
         android:src="@drawable/ic_football_no_data"
-        android:tint="@color/colorWhite" />
+        app:tint="@color/colorWhite" />
 
     <TextView
         android:id="@+id/loginActivityTextView"
@@ -54,7 +54,7 @@
             android:id="@+id/edCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/nombre_usuario"
+            android:hint="@string/userName"
             android:textColorHint="@color/colorWhite">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -64,10 +64,10 @@
                 android:drawableStart="@drawable/ic_person_login"
                 android:drawablePadding="8dp"
 
-                android:drawableTint="@color/colorWhite"
-
                 android:inputType="textEmailAddress"
-                android:textColor="@color/colorWhite" />
+
+                android:textColor="@color/colorWhite"
+                app:drawableTint="@color/colorWhite" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

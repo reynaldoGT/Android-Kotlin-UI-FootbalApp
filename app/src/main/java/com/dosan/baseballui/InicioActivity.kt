@@ -62,7 +62,6 @@ class InicioActivity : AppCompatActivity() {
                 .load(auth.getUserInfo().urlImage)
                 .error(R.drawable.ic_no_image_profile)
                 .into(profileHeaderImage)
-
         }
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -85,6 +84,18 @@ class InicioActivity : AppCompatActivity() {
                 R.id.alerta -> {
                     val dialog = Dialog(this)
                     dialog.setContentView(R.layout.alertadialog)
+
+                    val usernameDialog = dialog.findViewById<TextView>(R.id.dialogUserName)
+                    val dialogProfileImage = dialog.findViewById<ImageView>(R.id.dialogProfileImage)
+
+                    usernameDialog.text = auth.getUserInfo().displayName
+
+                    if (auth.getUserInfo().type_session != "") {
+                        Picasso.get()
+                            .load(auth.getUserInfo().urlImage)
+                            .error(R.drawable.ic_no_image_profile)
+                            .into(dialogProfileImage)
+                    }
                     dialog.show()
 
                     dialog.alertDiaglodPerfil.setOnClickListener {
@@ -96,12 +107,17 @@ class InicioActivity : AppCompatActivity() {
                     true
                 }
                 R.id.Salir -> {
-                    FirebaseAuth.getInstance().signOut()
-                    LoginManager.getInstance().logOut();
+                    //FACEBOOK
+                    if (auth.getUserInfo().type_session == LoginType.FACEBOOK.toString()) {
+                        LoginManager.getInstance().logOut()
+                    }
+                    //FIREBASE
+                    if (auth.getUserInfo().type_session == LoginType.FIREBASE_AUTHENTICATE.toString()) {
+                        FirebaseAuth.getInstance().signOut()
+                    }
                     auth.clearShared()
 
                     startActivity(Intent(this, LoginActivity::class.java))
-
 
                     true
                 }

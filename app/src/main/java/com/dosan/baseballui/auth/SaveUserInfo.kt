@@ -4,7 +4,8 @@ class SaveUserInfo(
     email: String,
     display: String,
     urlImage: String,
-    idToken: String
+    idToken: String,
+    type_session: String
 
 ) {
 
@@ -12,4 +13,6 @@ class SaveUserInfo(
     var displayName = display
     var urlImage = urlImage
     var idToken = idToken
+    var type_session: String = type_session
+
 }

@@ -18,17 +18,19 @@
         android:orientation="vertical">
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/dialogProfileImage"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_gravity="center"
             android:src="@drawable/soccer_profile" />
 
         <TextView
+            android:id="@+id/dialogUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:paddingTop="8dp"
-            android:text="Javier Hernandez"
+            android:text="@string/name_example"
             android:textColor="@color/textColorLight"
             android:textStyle="bold" />
 

@@ -20,7 +20,7 @@
         android:background="@drawable/gradient_button"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:text="@string/saltar_intro_activity"
+        android:text="@string/jump_intro_activity"
         android:textColor="@color/textColorLight"
         android:layout_marginBottom="8dp"
         android:layout_marginRight="8dp"
