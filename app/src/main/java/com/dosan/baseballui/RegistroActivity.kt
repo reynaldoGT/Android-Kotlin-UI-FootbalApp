@@ -1,19 +1,25 @@
 package com.dosan.baseballui
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.dosan.baseballui.auth.Auth
+import com.dosan.baseballui.auth.SaveUserInfo
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_registro.*
 
 
 class RegistroActivity : AppCompatActivity() {
+
+    var auth: Auth? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
+
+        auth = Auth(this)
 
         registerActivityLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
@@ -36,10 +42,20 @@ class RegistroActivity : AppCompatActivity() {
                 ).addOnCompleteListener {
                     if (it.isSuccessful) {
                         progress.visibility = View.GONE
-//                        mostrarAlerta()
+
+                        val authUser = SaveUserInfo(
+                            it.result?.user?.email!!,
+                            it.result?.user?.email!!,
+                            "",
+                            it.result?.user?.providerId!!,
+                            LoginType.FIREBASE_AUTHENTICATE.toString()
+
+                        )
+                        auth?.saveDataInfo(authUser)
+
                         showInicio(it.result?.user?.email ?: "", ProviderType.BASIC)
                     } else {
-
+                        showAlert(it.exception?.message!!)
                         progress.visibility = View.GONE
                     }
                 }
@@ -48,10 +64,10 @@ class RegistroActivity : AppCompatActivity() {
     }
 
 
-    private fun showAlert() {
+    private fun showAlert(errorMessage: String) {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
-        builder.setMessage("Se ha producido un error autenticado el usuario")
+        builder.setMessage(errorMessage)
         builder.setPositiveButton("Aceptar", null)
         val dialog: AlertDialog = builder.create()
         dialog.show()

@@ -90,7 +90,7 @@ class InicioActivity : AppCompatActivity() {
 
                     usernameDialog.text = auth.getUserInfo().displayName
 
-                    if (auth.getUserInfo().type_session != "") {
+                    if (auth.getUserInfo().urlImage != "") {
                         Picasso.get()
                             .load(auth.getUserInfo().urlImage)
                             .error(R.drawable.ic_no_image_profile)
