@@ -21,5 +21,7 @@
     <string name="fb_login_protocol_scheme">fb203220761538795</string>
     <string name="no_internet">No internet</string>
     <string name="name_example">Joe Doe</string>
+    <string name="animaciones">Animaciones</string>
+    <string name="amigos">Lista de amigos</string>
 
 </resources>

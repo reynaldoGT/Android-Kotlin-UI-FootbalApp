@@ -19,6 +19,7 @@ class HomeActivityAnimation : AppCompatActivity() {
 
 
         toolbar = findViewById(R.id.toolbar)
+        toolbar?.title = getString(R.string.animaciones)
         setSupportActionBar(toolbar)
 
         val actionBar: ActionBar? = supportActionBar

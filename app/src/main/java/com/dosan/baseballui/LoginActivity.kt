@@ -39,8 +39,9 @@ class LoginActivity : AppCompatActivity() {
 
         if (auth?.hayToken()!!) {
             showInicioFast()
-        }
+        } else {
 
+        }
 
         setContentView(R.layout.activity_login)
 
@@ -186,13 +187,11 @@ class LoginActivity : AppCompatActivity() {
         }
         startActivity(homeIntent)
     }
-//    private fun showLogin() {
-//        val homeIntent = Intent(this, InicioActivity::class.java).apply {
-//            putExtra("email", "xd")
-//            putExtra("provider", "xd")
-//        }
-//        startActivity(homeIntent)
-//    }
+
+    private fun showLogin() {
+        val homeIntent = Intent(this, LoginActivity::class.java)
+        startActivity(homeIntent)
+    }
 
     private fun limpiarDatos() {
         edCorreo.editText?.text!!.clear()

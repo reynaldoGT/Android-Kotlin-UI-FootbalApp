@@ -23,10 +23,17 @@
             android:parentActivityName=".InicioActivity" />
         <activity
             android:name=".ProfileActivity"
-            android:parentActivityName=".InicioActivity" />
-        <activity android:name=".RegistroActivity" />
-        <activity android:name=".Login2Activity" />
-        <activity android:name=".LoginActivity" />
+            android:parentActivityName=".InicioActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegistroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".InicioActivity"
             android:theme="@style/AppInicioTheme" />

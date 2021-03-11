@@ -1,4 +1,4 @@
-    package com.dosan.baseballui
+package com.dosan.baseballui
 
 import android.os.Bundle
 import android.widget.ImageView
@@ -32,6 +32,7 @@ class ProfileActivity : AppCompatActivity() {
 
 
         toolbar = findViewById(R.id.toolbar)
+        toolbar?.title = "Perfil"
         setSupportActionBar(toolbar)
 
         val actionBar: ActionBar? = supportActionBar
